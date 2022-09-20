@@ -48,7 +48,7 @@ public class SpringbootBackendApplication implements CommandLineRunner {
 		this.userRepository.save(user8);
 		this.userRepository.save(user9);
 
-
+		this.ticketRepository.save(new ItTicket("Provided Hardware Stopped working", "Computer Stopped working", "IT Device", user0.getId()));
 		this.ticketRepository.save(new ItTicket("Example Title 1", "Computer Stopped working", "IT Device", user1.getId()));
 		this.ticketRepository.save(new ItTicket("Example Title 2", "Computer Stopped working", "Software Issue", user2.getId()));
 		this.ticketRepository.save(new ItTicket("Example Title 3", "Computer Stopped working", "Hardware Issue/Replacement", user3.getId()));
@@ -58,8 +58,6 @@ public class SpringbootBackendApplication implements CommandLineRunner {
 		this.ticketRepository.save(new ItTicket("Example Title 7", "Computer Stopped working", "IT Device", user7.getId()));
 		this.ticketRepository.save(new ItTicket("Example Title 8", "Computer Stopped working", "IT Device", user8.getId()));
 		this.ticketRepository.save(new ItTicket("Example Title 9", "Computer Stopped working", "IT Device", user9.getId()));
-		this.ticketRepository.save(new ItTicket("Example Title 10", "Computer Stopped working", "IT Device", user0.getId()));
-
 
 	}
 

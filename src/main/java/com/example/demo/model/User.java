@@ -84,7 +84,7 @@ public class User {
     }
 
     public void setDepartment(String department) {
-        department = department;
+        this.department = department;
     }
 
     public int getDistrict() {
