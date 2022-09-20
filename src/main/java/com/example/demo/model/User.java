@@ -1,6 +1,8 @@
 package com.example.demo.model;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table(name="users")
@@ -8,7 +10,7 @@ import javax.persistence.*;
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private int id;
 
     @Column(name = "first_name")
     private String firstName;
@@ -23,6 +25,12 @@ public class User {
 
     private int district;
 
+
+//    @ManyToMany(fetch = FetchType.LAZY, cascade=CascadeType.MERGE)
+//    @JoinTable(name = "tickets", joinColumns = @JoinColumn(name = "User_id"),
+//            inverseJoinColumns = @JoinColumn(name = "ticket_id"))
+//    private List<ItTicket> itTickets;
+
     public User(){
 
     }
@@ -35,7 +43,7 @@ public class User {
         this.district = district;
     }
 
-    public long getId() {
+    public int getId() {
         return id;
     }
 
@@ -86,4 +94,6 @@ public class User {
     public void setDistrict(int district) {
         this.district = district;
     }
+
+
 }
